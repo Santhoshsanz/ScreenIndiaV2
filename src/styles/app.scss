@@ -1,0 +1,117 @@
+/* Normalization */
+@import '~accoutrement/sass/init';
+@import '@/designs';
+
+$primary: purple; 
+
+*{
+    font-family: 'PT Serif', serif;
+}
+
+.o-container,
+.oContainer {
+  max-width: size('container-max-width') + size('container-padding-medium') * 2;
+  padding-right: size('container-padding');
+  padding-left: size('container-padding');
+  margin-right: auto;
+  margin-left: auto;
+
+  @include above('medium') {
+    padding-right: size('container-padding-medium');
+    padding-left: size('container-padding-medium');
+  }
+}
+
+.o-preheader,
+.oPreheader {
+  @include use-text-style('preheader');
+
+  color: color('red');
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.oSliceSpacing {
+    &:not(:last-child),
+    &:last-child:not(.__hasInner):not(.__noBottomLast) {
+      margin-bottom: 6rem;
+  
+      @include above('medium') {
+        margin-bottom: 8rem;
+      }
+  
+      @include above('large') {
+        margin-bottom: 10rem;
+      }
+    }
+  
+    &:first-child:not(.__hasInner):not(.__noTopFirst) {
+      margin-top: 6rem;
+  
+      @include above('medium') {
+        margin-top: 8rem;
+      }
+  
+      @include above('large') {
+        margin-top: 10rem;
+      }
+    }
+  
+    &.__hasInner + &.__hasInner {
+      margin-top: -6rem;
+  
+      @include above('medium') {
+        margin-top: -8rem;
+      }
+  
+      @include above('large') {
+        margin-top: -10rem;
+      }
+    }
+  }
+
+  .fullHeight{
+    min-height: 100vh;
+  }
+
+
+  h1 {
+    text-align: left;
+    margin: 1rem 0;
+    @include use-text-style(heading-300);
+    @include above('medium'){
+      @include use-text-style(heading-500);
+    }
+  }
+
+  .para{
+    font-size:1.6rem;
+    margin: 1rem 0;
+    @include above('medium'){
+      font-size:2.4rem;
+
+    }
+  }
+
+  .smallText{
+    font-size:1rem;
+    margin: 1rem 0;
+    @include above('medium'){
+      font-size:1.6rem;
+    }
+  }
+
+
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+  // background: #232323;
+  // color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  
+  overflow-x: hidden; /* needed because hiding the menu on the right side is not perfect,  */
+}
+

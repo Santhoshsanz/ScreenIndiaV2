@@ -1,0 +1,35 @@
+/// @access private
+
+/// @link https://www.oddbird.net/accoutrement/docs/color.html
+$colors: (
+  '-black': #000,
+  '-black-70': rgba(#000, 0.7),
+  '-white': #fff,
+  '-black-text': #111,
+  '-black-text-70': rgba(#111, 0.7),
+  'red': #c8102e,
+  'secondary': '#red',
+  'blue': #4fa2c1,
+  'green': #5f8f1c,
+  'orange': #eb862a,
+  'star': #ff7400,
+  'chat-green': #719d5d,
+  'chat-red': #c71633,
+  'chat-offline': #9b9b9b,
+  'success': #67a269,
+  'primary': '#-black',
+  'primary-70': '#-black-70',
+  'gray': #979797,
+  'gray-70': rgba(#979797, 0.7),
+  'black': '#-black',
+  'white': '#-white',
+  'primary-text': '#-black-text',
+  'primary-text-70': '#-black-text-70',
+  'button-red-hover': #d0324c,
+);
+
+$colors-to-export: ();
+
+@each $color in 'red', 'blue', 'orange', 'green' {
+  $colors-to-export: map-merge($colors-to-export, (#{$color}: color($color)));
+}
