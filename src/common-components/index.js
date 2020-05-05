@@ -1,8 +1,10 @@
 // import Vue from "vue";
 import CButton from "./CButton";
+import GalleryCard from "./GalleryCard";
 
 const Components = {
-  CButton
+  CButton,
+  GalleryCard
 };
 
 const CommonComponents = {
